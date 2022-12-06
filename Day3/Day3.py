@@ -1,8 +1,6 @@
 import numpy as np
 
-if __name__ == '__main__':
-    file = open('input.txt')
-    compartments = file.read().split('\n')
+def runPart1(compartments):
     total = 0
 
     for compartment in compartments:
@@ -19,10 +17,17 @@ if __name__ == '__main__':
                     # 96 is magic number to convert lowercase letter to 1 through 26
                     total += ord(c) - 96
                 break
-
     print(total)
-    # part 1
-    # for letter in compartments:
-    #     print()
+
+def runPart2(compartments):
+    pass
+
+if __name__ == '__main__':
+    file = open('input.txt')
+    compartments = file.read().split('\n')
+
+    runPart1(compartments)
+    runPart2(compartments)
+
 
 
